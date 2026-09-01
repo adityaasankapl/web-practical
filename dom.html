@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+
+    <style>
+	
+        body {
+            text-align: center;
+            font-family: Arial;
+	    background-color:lightblue;
+        }
+
+	#title {
+	    color: purple;
+	}
+
+
+        #box {
+            padding: 20px;
+            border-radius: 15px;
+            background: white;
+	    text-align: center;
+        }
+
+	 #message {
+            background-color: lightblue;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        #img {
+            
+            height: 150px;
+	    border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+	    border: none;
+	    border-radius: 15px;
+	    background: purple;
+	    color: white;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+
+        <h1 id="title">Welcome to My Webpage</h1>
+
+        <p id="message">This is new paragraph</p>
+
+        <img id="image" src="C:\Users\HP\Downloads\clement-m-F_-0BxGuVvo-unsplash.jpg"  alt="Image">
+
+        <br><br>
+
+        <a id="link" href="https://play.google.com/store/apps/details?id=com.openai.chatgpt&hl=en_IN">Google Playstore</a>
+
+        <br><br>
+
+    <button onclick="Content()">Change Content</button>
+	<button onclick="styleChange()">Change Style</button>
+	<button onclick="imageChange()">Change Image</button>
+	<button onclick="linkChange()">Change Link</button>	
+	<button onclick="attributeChange()">Change Attribute</button>
+
+    </div>
+
+    <script>
+
+        function Content() {
+
+            
+            document.getElementById("title").innerHTML ="DOM Manipulation";
+	
+            document.getElementById("message").innerText ="Message changed using DOM";
+	}
+
+	function styleChange() {
+
+            document.getElementById("title").style.color ="lightgreen";
+            document.getElementById("message").style.backgroundColor = "pink";
+	}
+
+ 
+	function imageChange() {
+            document.getElementById("image").src ="C:/Users/lenovo/OneDrive/Pictures/20260817_OHR.CabilaoClowns_EN-IN1781663885_UHD_bing.jpg";
+	}
+
+	
+	function linkChange() {
+
+            document.getElementById("link").innerText ="https://familylink.google.com/";
+            document.getElementById("link").innerText ="YouTube";
+	}
+
+
+	function attributeChange() {           
+            
+            document.getElementById("image").setAttribute("width", "500");
+
+            document.getElementById("image").setAttribute("height", "300");
+
+    }
+
+    </script>
+
+</body>
+</html>
+   

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple calculator</title>
+    </head>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    <body>
+
+        <h2>Calculator</h2>
+
+        <input type="number" id="num1" placeholder="Enter your First number">
+        <input type="number" id="num2" placeholder="Enter your second number">
+        <br><br>
+
+        <button onclick="add()">Add</button>
+        <button onclick="sub()">Subtract</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="division()">Division</button>
+
+        <h3 id="result"></h3>
+
+        <script>
+            function add(){
+                let a=Number(document.getElementById("num1").value);
+                let b=Number(document.getElementById("num2").value);
+
+                document.getElementById("result").innerHTML="sum= "+(a+b);
+            }
+
+            function sub(){
+                let a=Number(document.getElementById("num1").value);
+                let b=Number(document.getElementById("num2").value);
+
+                document.getElementById("result").innerHTML="subtract= "+(a-b);
+            }
+
+            function multiply(){
+                let a=Number(document.getElementById("num1").value);
+                let b=Number(document.getElementById("num2").value);
+
+                document.getElementById("result").innerHTML="multiply= "+(a*b);
+            }
+
+            function division(){
+                let a=Number(document.getElementById("num1").value);
+                let b=Number(document.getElementById("num2").value);
+
+                document.getElementById("result").innerHTML="division= "+(a/b);
+            }
+
+
+        </script>
+    </body>
+</html>
